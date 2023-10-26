@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
+import {personNames} from './task';
 import {arraySum, arrayFilter, getUserNames} from './utils';
 
-function App() {
+
+ function App() {
     const array = [1, 2, 3, 4, 5];
     const usersArray = [
         {
@@ -25,6 +27,7 @@ function App() {
             <p>{sum}</p>
             <p>{filter.toString()}</p>
             <p>{userNamesArray.toString()}</p>
+            <p>{personNames}</p>
         </div>
     </div>
   );
