@@ -5,7 +5,11 @@
 // 4. Вывести значение константы в тег <p>, по аналогии с уже имеющимися примерами;
 
 type PersonType = {
-    occupation?: string;
+    occupation: string,
+    name:string,
+    age:number|string,
+    isSuperHero?:boolean,
+
 };
 
 export const users: PersonType[] = [
@@ -27,8 +31,8 @@ export const users: PersonType[] = [
     },
 ];
 
-export const getPersonNames = (arr: any): any => {
-    return  arr.map((item: { name: any; }) => item.name);
+export const getPersonNames = (arr: PersonType[]): string[] => {
+    return arr.map((item) => item.name);
 }
 
 export const personNames = getPersonNames(users);
