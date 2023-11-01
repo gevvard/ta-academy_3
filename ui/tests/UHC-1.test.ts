@@ -1,7 +1,7 @@
 import { test, expect } from '@Test';
 
 test.describe('UHC-1', () => {
-    test('check registration', async ({ page, baseURL }) => {
+    test('check registration ', async ({ page, baseURL }) => {
         await page.goto(baseURL, { waitUntil: 'domcontentloaded' });
 
         // Step 1
