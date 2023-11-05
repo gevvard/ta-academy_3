@@ -1,7 +1,7 @@
-import {expect, test} from '@Test';
+import { expect, test } from '@Test';
 
 test.describe('UHC-1-POM', () => {
-    test('Check registration flow', async ({page, homePage, categoryPage}) => {
+    test('Check registration flow', async ({ page, homePage, categoryPage }) => {
         await test.step('Step 1: Open Login dialog', async () => {
             await homePage.open();
             await homePage.Header.TopSide.openMyAccountDropdown();

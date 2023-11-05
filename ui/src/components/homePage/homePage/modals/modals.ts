@@ -1,5 +1,5 @@
-import {Component} from '@Core/component';
-import {Registration} from './registration/registration';
+import { Component } from '@Core/component';
+import { Registration } from './registration/registration';
 
 export class Modals extends Component {
     private LOCATORS = {
@@ -17,5 +17,4 @@ export class Modals extends Component {
     public regModalTitle = this.LOCATORS.regModalTitle;
 
     public Registration = new Registration(this.locator, this.page);
-
 }

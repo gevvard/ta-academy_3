@@ -1,6 +1,6 @@
-import {Component} from '@Core/component';
-import {TopSide} from '@Components/homePage/homePage/header/topSide';
-import {BottomSide} from '@Components/homePage/homePage/header/bottomSide';
+import { Component } from '@Core/component';
+import { TopSide } from '@Components/homePage/homePage/header/topSide';
+import { BottomSide } from '@Components/homePage/homePage/header/bottomSide';
 
 export class Header extends Component {
     private LOCATORS = {

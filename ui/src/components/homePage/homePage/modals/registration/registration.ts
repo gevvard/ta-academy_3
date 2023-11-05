@@ -1,4 +1,4 @@
-import {Component} from '@Core/component';
+import { Component } from '@Core/component';
 
 export class Registration extends Component {
     private LOCATORS = {
