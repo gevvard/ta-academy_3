@@ -6,11 +6,13 @@ test.describe('UHC-1', () => {
 
         // Step 1
         await page.locator('//div[text()="My Account"]/../..').hover();
+      
         const loginBtn = page.getByText("Log in");
 
         await loginBtn.click();
 
         const loginDlg = await page.getByText("Access your vision benefits");
+      
         await expect(loginDlg).toBeVisible();
 
         // Step 2
@@ -28,7 +30,8 @@ test.describe('UHC-1', () => {
         await lastNameInput.type('Ivanov');
 
         const emailInput = page.getByPlaceholder('Email');
-        await emailInput.type(`test${Math.random()*100}@test.com`);
+
+        await emailInput.type(`test${Math.random() * 100}@test.com`);
 
         const passwordInput = page.getByPlaceholder('Password');
         await passwordInput.type('Test1234');
@@ -44,7 +47,10 @@ test.describe('UHC-1', () => {
         const welcomePopupTitle = page.getByText('Welcome, Ivan');
         await expect(welcomePopupTitle).toBeVisible();
 
-        const welcomePopupSubTitle = page.getByText('You can start enjoying everything we have to offer');
+        const welcomePopupSubTitle = page.getByText(
+            'You can start enjoying everything we have to offer'
+        );
+
         await expect(welcomePopupSubTitle).toBeVisible();
     });
 });
