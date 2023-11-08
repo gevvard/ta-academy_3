@@ -3,18 +3,13 @@ import { fireEvent } from '@testing-library/react';
 
 export class ModalAddItem extends Component {
     protected selectors = {
-        // fullPrice: './/div[contains(@class, "fullprice")]',
         quantity: '//input[@name="quantity"]',
         price: '//input[@name="price"]',
         name: '//input[@name="name"]',
         createButton: './/button[text()="Create"]',
     };
 
-    // public async getPriceForAll(): Promise<number> {
-    //     const [priceElement] = await this.element.waitForXpath(this.selectors.fullPrice);
-    //     return Number(priceElement.textContent.replace('$', ''));
-    // }
-    //
+
     public async fillItemData(data): Promise<void> {
         const [name] = await this.element.waitForXpath(this.selectors.name);
         fireEvent.change(name, { target: { value: data?.name } });

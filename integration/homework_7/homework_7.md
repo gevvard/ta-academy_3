@@ -1,4 +1,4 @@
-cd- Update your local branch 'main';
+- Update your local branch 'main';
 - Create new branch (e.g., homework-7);
 - Go to directory 'integration' and run the command 'yarn';
 - Go to directory 'integration/__specs__' and run the command 'yarn';
