@@ -6,19 +6,21 @@ test.describe('UHC-1', () => {
 
         // Step 1
         await page.locator('//div[text()="My Account"]/../..').hover();
-        const loginBtn = page.getByText('Log in');
+      
+        const loginBtn = page.getByText("Log in");
 
         await loginBtn.click();
 
-        const loginDlg = await page.getByText('Access your vision benefits');
+        const loginDlg = await page.getByText("Access your vision benefits");
+      
         await expect(loginDlg).toBeVisible();
 
         // Step 2
         const regBtn = await page.getByText('Create UHCGlasses.com Account');
         await regBtn.click();
 
-        const regDlg = await page.getByText('No vision insurance? We got you!');
-        await expect(regDlg).toBeVisible();
+        const regDlg =  await page.getByText('No vision insurance? We got you!');
+        await  expect(regDlg).toBeVisible();
 
         // Step 3
         const firstNameInput = page.getByPlaceholder('First Name');
@@ -28,6 +30,7 @@ test.describe('UHC-1', () => {
         await lastNameInput.type('Ivanov');
 
         const emailInput = page.getByPlaceholder('Email');
+
         await emailInput.type(`test${Math.random() * 100}@test.com`);
 
         const passwordInput = page.getByPlaceholder('Password');
@@ -47,6 +50,7 @@ test.describe('UHC-1', () => {
         const welcomePopupSubTitle = page.getByText(
             'You can start enjoying everything we have to offer'
         );
+
         await expect(welcomePopupSubTitle).toBeVisible();
     });
 });
